@@ -1,0 +1,10 @@
+export { Sunny } from "./SunnyMode";
+export { Dark } from "./DarkMode";
+export { Logo } from "./Logo";
+export { Instagram } from "./Instagram";
+export { BurgerOpen } from "./BurgerOpen";
+export { Burger } from "./Burger";
+export { CloseMenu } from "./CloseMenu";
+export { Arrow } from "./Arrow";
+export { SliderArrowLeft } from "./SliderArrowLeft";
+export { SliderArrowRight } from "./SliderArrowRight";

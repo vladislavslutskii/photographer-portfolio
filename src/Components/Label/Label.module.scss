@@ -1,0 +1,16 @@
+.required::before {
+  content: "*";
+  color: red;
+  margin-right: 4px;
+}
+.label {
+  color: #1d1d1d;
+  font-family: Open Sans;
+  font-size: 1.1em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  &_dark {
+    color: #fff;
+  }
+}

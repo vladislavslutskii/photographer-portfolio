@@ -1,0 +1,40 @@
+.input {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 15px 18px;
+  border: 2px solid transparent;
+  outline: none;
+  color: #1d1d1d;
+  font-family: Open Sans;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 100%;
+  font-weight: 400;
+  resize: vertical;
+  border-color: #1d1d1d;
+  &:disabled {
+    background: #e8e8e8;
+    color: #8d8e97;
+  }
+}
+
+.error {
+  border-color: #fd3419;
+}
+@media (max-width: 450px) {
+  .input {
+    padding: 10px;
+  }
+}
+@media (max-width: 375px) {
+  .input {
+    padding: 8px;
+  }
+}
+@media (max-width: 321px) {
+  .input {
+    padding: 6px;
+  }
+}

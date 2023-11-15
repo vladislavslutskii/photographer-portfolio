@@ -1,0 +1,82 @@
+{
+  "albums": [
+    {
+      "id": 1,
+      "albumUrl": "https://bipbap.ru/wp-content/uploads/2017/04/0_7c779_5df17311_orig.jpg"
+    },
+    {
+      "id": 2,
+      "albumUrl": "https://klike.net/uploads/posts/2019-12/1577730308_49.jpg"
+    },
+    {
+      "id": 3,
+      "albumUrl": "https://klike.net/uploads/posts/2019-11/1574608674_21.jpg"
+    },
+    {
+      "id": 4,
+      "albumUrl": "https://klike.net/uploads/posts/2019-11/1574608613_8.jpg"
+    },
+    {
+      "id": 5,
+      "albumUrl": "https://klike.net/uploads/posts/2020-01/1578301079_38.jpg"
+    }
+  ],
+  "photos": [
+    {
+      "albumId": 1,
+      "photoId": 1,
+      "title": "test1",
+      "text": "test1",
+      "url": "https://via.placeholder.com/600/92c952"
+    },
+    {
+      "albumId": 1,
+      "photoId": 2,
+      "title": "test1",
+      "text": "test1",
+      "url": "https://via.placeholder.com/600/92c952"
+    },
+    {
+      "albumId": 1,
+      "photoId": 3,
+      "title": "test1",
+      "text": "test1",
+      "url": "https://via.placeholder.com/600/92c952"
+    },
+    {
+      "albumId": 1,
+      "photoId": 4,
+      "title": "test1",
+      "text": "test1",
+      "url": "https://via.placeholder.com/600/92c952"
+    },
+    {
+      "albumId": 2,
+      "photoId": 1,
+      "title": "test2",
+      "text": "test2",
+      "url": "https://via.placeholder.com/600/92c952"
+    },
+    {
+      "albumId": 3,
+      "photoId": 1,
+      "title": "test3",
+      "text": "test3",
+      "url": "https://via.placeholder.com/600/92c952"
+    },
+    {
+      "albumId": 4,
+      "photoId": 1,
+      "title": "test4",
+      "text": "test4",
+      "url": "https://via.placeholder.com/600/92c952"
+    },
+    {
+      "albumId": 5,
+      "photoId": 1,
+      "title": "test5",
+      "text": "test5",
+      "url": "https://via.placeholder.com/600/92c952"
+    }
+  ]
+}

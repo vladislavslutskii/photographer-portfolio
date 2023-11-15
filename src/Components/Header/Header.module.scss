@@ -1,0 +1,133 @@
+.header {
+  display: flex;
+  width: 100%;
+  height: 150px;
+  align-items: center;
+  padding: 10px 110px 30px 110px;
+  // margin-bottom: 20px;
+  &_dark {
+    background: #1d1d1d;
+  }
+  &_logo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #1d1d1d;
+    font-family: Montserrat;
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: 800;
+    line-height: normal;
+    &_dark {
+      color: #fff;
+    }
+    &_themeButton {
+      margin-left: 30px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.headerLink {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+  margin-left: auto !important;
+  &_contact {
+    margin-left: 10px;
+  }
+
+  &_about {
+    margin-left: 10px;
+  }
+  &_gallery {
+    margin-left: 10px;
+  }
+  &_burgerButton {
+    rect {
+      fill: #1d1d1d;
+    }
+    &_dark {
+      rect {
+        fill: #fff;
+      }
+    }
+  }
+  &_navLink {
+    color: #1d1d1d;
+    font-family: Open Sans;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    &_dark {
+      color: #fff !important;
+      &:hover {
+        background: #fff !important;
+        color: #1d1d1d !important;
+        width: 100% !important;
+        transition: 0.5s;
+      }
+    }
+    &:hover {
+      color: #fff;
+      background: #1d1d1d;
+      width: 100%;
+      transition: 0.5s;
+    }
+  }
+}
+.activeLink {
+  background: #1d1d1d;
+  color: #fff;
+}
+.activeLink_dark {
+  background: #fff;
+  color: #1d1d1d !important;
+}
+.headerLink_burger {
+  position: relative;
+  // padding: 12px 13px;
+  margin-top: 5px;
+  text-decoration: none;
+  color: rgba(96, 123, 150, 1);
+  margin-left: auto;
+}
+
+@media (max-width: 2560px) {
+  .headerLink_burger {
+    display: none;
+  }
+}
+@media (max-width: 994px) {
+  .header {
+    padding: 10px 40px 84px 40px;
+  }
+  .header_logo_themeButton {
+    display: none;
+  }
+  .headerLink {
+    &_gallery,
+    &_contact,
+    &_home,
+    &_about {
+      display: none;
+    }
+    &_burger {
+      display: block;
+    }
+  }
+}
+@media (max-width: 425px) {
+  .header_logo_text {
+    // padding: 18px 150px 18px 22px;
+  }
+}
