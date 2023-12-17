@@ -1,221 +1,291 @@
-.aboutMe {
-  height: 100%;
-  &_wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 60px 100px 0px;
-    margin-bottom: 75px;
-  }
-  &_wrapLeft {
-    width: 55%;
-    background-color: #fff;
-    margin-right: 70px;
-    height: 610px;
-    overflow-y: auto;
-    &_text {
-      text-align: justify;
-      font-family: ABeeZee;
-      font-size: 2.3rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      border-radius: 50px;
-    }
-    &::-webkit-scrollbar {
-      width: 5px;
-    }
-    &::-webkit-scrollbar-thumb {
-      background-color: black;
-      border-radius: 1rem;
-    }
-    &_dark {
-      background-color: #1d1d1d;
-      color: #fff;
-    }
-  }
-  &_wrapRight {
-    width: 40%;
-    height: 610px;
-
-    &_photo {
-      // margin: 10px;
-      -o-object-fit: fill;
-      object-fit: fill;
-      width: 100%;
-      height: 100%;
-      border-radius: 10%;
-      box-shadow: 3px 10px 50px;
-    }
-  }
+.aboutWrap {
   &_dark {
-    background: #1d1d1d;
+    background-color: #1d1d1d;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 50px 200px;
+  &_title {
+    color: #1d1d1d;
+    font-family: Montserrat;
+    font-size: 2.7rem;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 15px;
+    &_dark {
+      color: white;
+    }
+  }
+  &_topSection {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &_photoWrap {
+      width: 45%;
+      height: 500px;
+      &_photo {
+        border-radius: 100px;
+        width: 100%;
+        height: 100%;
+        -o-object-fit: fill;
+        object-fit: fill;
+      }
+    }
+    &_text {
+      margin-left: 70px;
+      width: 55%;
+      height: 100%;
+      font-size: 2rem;
+      text-align: justify;
+      &_dark {
+        color: white;
+      }
+    }
+  }
+  &_bottomSection {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    &_text {
+      margin-right: 100px;
+      width: 50%;
+      height: 100%;
+      font-size: 2rem;
+      text-align: justify;
+      &_dark {
+        color: white;
+      }
+    }
+    &_photoWrap {
+      width: 45%;
+      height: 500px;
+      &_photo {
+        border-radius: 100px;
+        width: 100%;
+        height: 100%;
+        -o-object-fit: fill;
+        object-fit: fill;
+      }
+    }
   }
 }
-@media (max-width: 2560px) {
+
+@media (max-width: 1920px) {
+  html {
+    font-size: 16px;
+  }
 }
 @media (max-width: 1600px) {
-  .aboutMe {
-    // overflow-x: scroll;
-    &_wrap {
-      flex-direction: column-reverse;
-      justify-content: center;
-      align-items: center;
-    }
-    &_wrapLeft {
-      width: 90%;
-      margin: 0;
-      text-align: center;
-      height: auto;
-      margin-top: 50px;
-    }
-    &_wrapRight {
-      width: 70%;
-      margin: 0;
-    }
+  html {
+    font-size: 15px;
   }
 }
 @media (max-width: 1440px) {
-  .aboutMe {
-    &_wrap {
-      padding: 60px 20px 0px;
-    }
-    &_wrapLeft {
-      width: 90%;
+  html {
+    font-size: 14px;
+  }
+  .aboutWrap {
+    &_topSection {
       &_text {
-        font-size: 2.2rem;
+        margin-left: 50px;
       }
     }
-    &_wrapRight {
-      width: 70%;
+    &_bottomSection {
+      &_text {
+        margin-right: 50px;
+      }
     }
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
+  html {
+    font-size: 13px;
+  }
+  .aboutWrap {
+    padding: 60px 100px 0px;
+  }
 }
 @media (max-width: 1024px) {
-  .aboutMe {
-    &_wrapLeft {
+  html {
+    font-size: 12px;
+  }
+  .aboutWrap {
+    padding: 40px 13% 0px;
+    &_title {
+      margin-bottom: 15px;
+    }
+    &_topSection {
+      flex-direction: column;
+      width: 100%;
       &_text {
-        font-size: 2.1rem;
+        margin: 0;
+        width: 100%;
+        margin-top: 20px;
+      }
+      &_photoWrap {
+        width: 60%;
+      }
+    }
+    &_bottomSection {
+      flex-direction: column-reverse;
+      width: 100%;
+      &_text {
+        margin: 0;
+        width: 100%;
+        margin-top: 20px;
+      }
+      &_photoWrap {
+        margin-top: 20px;
+        width: 60%;
       }
     }
   }
 }
 @media (max-width: 856px) {
-  .aboutMe {
-    &_wrap {
-      padding: 30px 20px 0px;
-    }
-    &_wrapLeft {
-      &_text {
-        font-size: 2rem;
-      }
-    }
-    &_wrapRight {
-      height: 560px;
-    }
+  html {
+    font-size: 14px;
+  }
+  .aboutWrap {
+    padding: 30px 70px 0px;
   }
 }
 @media (max-width: 768px) {
-  .aboutMe {
-    &_wrapLeft {
-      &_text {
-        font-size: 1.8rem;
-      }
-    }
-    &_wrapRight {
-      width: 80%;
-      height: 550px;
-    }
+  html {
+    font-size: 13px;
   }
-}
-@media (max-width: 700px) {
-  .aboutMe {
-    &_wrapLeft {
-      &_text {
-        font-size: 1.9rem;
+  .aboutWrap {
+    padding: 25px 50px 0px;
+    &_topSection {
+      &_photoWrap {
+        width: 65%;
       }
     }
-    &_wrapRight {
-      width: 85%;
+    &_bottomSection {
+      &_photoWrap {
+        width: 65%;
+      }
     }
   }
 }
 @media (max-width: 576px) {
-  .aboutMe {
-    &_wrapLeft {
+  .aboutWrap {
+    padding: 25px 30px 0px;
+    &_topSection {
+      &_photoWrap {
+        width: 75%;
+        height: 400px;
+      }
       &_text {
-        font-size: 1.8rem;
+        height: 210px;
+        overflow: scroll;
+        overflow-x: hidden;
       }
     }
-    &_wrapRight {
-      height: 500px;
+    &_bottomSection {
+      &_photoWrap {
+        width: 75%;
+        height: 400px;
+      }
+      &_text {
+        height: 210px;
+        overflow: scroll;
+        overflow-x: hidden;
+      }
     }
   }
 }
-@media (max-width: 530px) {
-  .aboutMe {
-    &_wrapLeft {
-      height: 230px;
-      overflow-y: auto;
-      &::-webkit-scrollbar {
-        width: 5px;
-      }
-      &::-webkit-scrollbar-thumb {
-        background-color: black;
-        border-radius: 1rem;
+@media (max-width: 500px) {
+  .aboutWrap {
+    padding: 20px 30px;
+    &_topSection {
+      &_photoWrap {
+        width: 95%;
+        height: 400px;
       }
       &_text {
-        font-size: 1.7rem;
-        height: 100px;
+        height: 170px;
+        overflow: scroll;
       }
     }
-    &_wrapRight {
-      height: 480px;
+    &_bottomSection {
+      &_photoWrap {
+        width: 95%;
+        height: 400px;
+      }
+      &_text {
+        height: 170px;
+        overflow: scroll;
+      }
     }
   }
 }
 @media (max-width: 450px) {
-  .aboutMe {
-    &_wrapLeft {
-      width: 97%;
-      height: 200px;
-      &_text {
-        font-size: 1.6rem;
+  html {
+    font-size: 12px;
+  }
+  .aboutWrap {
+    padding: 20px 30px;
+    &_topSection {
+      &_photoWrap {
+        height: 380px;
       }
     }
-    &_wrapRight {
-      width: 95%;
-      height: 420px;
+    &_bottomSection {
+      &_photoWrap {
+        height: 380px;
+      }
     }
   }
 }
 @media (max-width: 375px) {
-  .aboutMe {
-    &_wrapLeft {
-      width: 100%;
+  html {
+    font-size: 11px;
+  }
+  .aboutWrap {
+    padding: 20px 30px;
+    &_topSection {
+      &_photoWrap {
+        height: 330px;
+      }
       &_text {
-        font-size: 1.6rem;
+        height: 160px;
+        overflow: scroll;
       }
     }
-    &_wrapRight {
-      width: 100%;
-      height: 400px;
+    &_bottomSection {
+      &_photoWrap {
+        height: 330px;
+      }
+      &_text {
+        height: 160px;
+        overflow: scroll;
+      }
     }
   }
 }
 @media (max-width: 321px) {
-  .aboutMe {
-    &_wrapLeft {
-      height: 200px;
-      &_text {
-        font-size: 1.5rem;
+  .aboutWrap {
+    padding: 15px 20px;
+    &_topSection {
+      &_photoWrap {
+        height: 315px;
       }
     }
-    &_wrapRight {
-      height: 390px;
+    &_bottomSection {
+      &_photoWrap {
+        height: 315px;
+      }
     }
   }
 }

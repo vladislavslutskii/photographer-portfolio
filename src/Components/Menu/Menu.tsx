@@ -1,12 +1,11 @@
 import React, { FC, useState } from "react";
+import classNames from "classnames";
 import styles from "./Menu.module.scss";
-
 import { Link, useLocation } from "react-router-dom";
 import { PathNames } from "../../Pages/Router";
 import { MenuProps } from "./types";
 import { Theme, useThemeContext } from "../../Context/ThemeContext/Context";
 import { CloseMenu } from "../../Assets/Icons";
-import classNames from "classnames";
 
 const Menu: FC<MenuProps> = ({ onClick, openMenu }) => {
   const { theme, onChangeTheme } = useThemeContext();
@@ -34,7 +33,7 @@ const Menu: FC<MenuProps> = ({ onClick, openMenu }) => {
             onClick={onClick}
             to={PathNames.Home}
           >
-            home
+            Главная
           </Link>
         </div>
         <div className={styles.menu_items_item}>
@@ -48,7 +47,7 @@ const Menu: FC<MenuProps> = ({ onClick, openMenu }) => {
             onClick={onClick}
             to={PathNames.About}
           >
-            About
+            Обо мне
           </Link>
         </div>
 
@@ -63,7 +62,7 @@ const Menu: FC<MenuProps> = ({ onClick, openMenu }) => {
             onClick={onClick}
             to={PathNames.Gallery}
           >
-            Gallery
+            Портфолио
           </Link>
         </div>
         <div className={styles.menu_items_item}>
@@ -77,7 +76,7 @@ const Menu: FC<MenuProps> = ({ onClick, openMenu }) => {
             onClick={onClick}
             to={PathNames.Contact}
           >
-            Contact
+            Контакты
           </Link>
         </div>
       </div>

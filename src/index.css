@@ -15,10 +15,13 @@ code {
   font-family: "Fira Code";
   font-style: normal;
 }
-
+iframe#webpack-dev-server-client-overlay {
+  display: none !important;
+}
 #root {
   height: 1000%;
   width: 100%;
+  box-sizing: border-box;
 }
 html,
 body {
@@ -26,6 +29,22 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  background-color: black;
+  width: 3px;
+}
+/* ::-webkit-scrollbar-button {
+  background-color: #fff;
+  color: #fff;
+}
+::-webkit-scrollbar-track {
+  background-color: orange !important;
+} */
+::-webkit-scrollbar-thumb {
+  background-color: orange;
+  /* width: 3px; */
 }
 *,
 *::before,

@@ -1,11 +1,8 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Contactme from "../Contactme/Contactme";
 import Gallery from "../Gallery";
-
 import PagesWrapper from "../PagesWrapper";
 import Aboutme from "../Aboutme/Aboutme";
-import PhotoCard from "../../Components/PhotoCard";
-import GallerySlider from "../../Components/GallerySlider";
 import PostContent from "../PostContent";
 
 export enum PathNames {

@@ -5,4 +5,4 @@ export type CardPostType = {
   previewPhotosession: string;
   datePhotosession: string;
 };
-export type CardListType = Array<CardPostType>;
+export type AlbumsListType = Array<CardPostType>;

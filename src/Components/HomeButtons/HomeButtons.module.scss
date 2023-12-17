@@ -1,0 +1,78 @@
+.buttonsWrap {
+  display: flex;
+  align-items: center;
+  max-width: 450px;
+  &_aboutButton {
+    text-decoration: none;
+    color: #f2f2f2;
+    background: #1d1d1d;
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 12px 24px;
+    border-radius: 5px;
+    &_dark {
+      color: #1d1d1d;
+      background: #f2f2f2;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &_galleryButton {
+    text-decoration: none;
+    color: #1d1d1d;
+    background: #d1d1d1;
+    font-family: Montserrat;
+    color: #1d1d1d;
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 12px 24px;
+    border-radius: 5px;
+    margin-left: 40px;
+    &_dark {
+      color: #f2f2f2;
+      background: #2d2d2d;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .buttonsWrap {
+    &_galleryButton {
+      margin-left: 15px;
+    }
+  }
+}
+@media (max-width: 680px) {
+  .buttonsWrap {
+    max-width: 350px;
+    &_aboutButton {
+      color: #1d1d1d;
+      background: #f2f2f2;
+    }
+    &_galleryButton {
+      margin-left: 25px;
+      color: #f2f2f2;
+      background: #2d2d2d;
+    }
+  }
+}
+@media (max-width: 325px) {
+  .buttonsWrap {
+    &_aboutButton {
+      padding: 10px 20px;
+    }
+    &_galleryButton {
+      margin-left: 15px;
+      padding: 10px 20px;
+    }
+  }
+}

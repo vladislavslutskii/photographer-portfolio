@@ -5,7 +5,7 @@ export enum Theme {
   Dark = "dark",
 }
 const DEFAULT_VALUE = {
-  theme: Theme.Light,
+  theme: Theme.Dark,
   onChangeTheme: () => {},
 };
 const ThemeContext = createContext(DEFAULT_VALUE);

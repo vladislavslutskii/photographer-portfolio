@@ -1,12 +1,12 @@
-.required::before {
+.required::after {
   content: "*";
   color: red;
-  margin-right: 4px;
+  margin-left: 4px;
 }
 .label {
   color: #1d1d1d;
   font-family: Open Sans;
-  font-size: 1.1em;
+  font-size: 1.3em;
   font-style: normal;
   font-weight: 700;
   line-height: normal;

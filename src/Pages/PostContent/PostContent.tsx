@@ -1,33 +1,27 @@
 import React, { useEffect } from "react";
-// @ts-ignore
-
 import styles from "./PostContent.module.scss";
-// import Post from "../../Components/Post";
-import { useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-// import { getSinglePost } from "../../Redux/reducers/postsReducer";
-import PostsSelectors from "../../Redux/selectors/postsSelectors";
+import PostsSelectors from "../../Redux/selectors/photosSelectors";
 import Lottie from "lottie-react";
 import animation from "../../lotties/transfer.json";
 import PhotoCard from "../../Components/PhotoCard";
-import { getSinglePost } from "../../Redux/reducers/postsreducer";
+import { useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { getAlbumsPhotos } from "../../Redux/reducers/photosReducer";
 
 const PostContent = () => {
   const params = useParams();
   const dispatch = useDispatch();
-  // console.log(params);
-  const post = useSelector(PostsSelectors.getSinglePost);
-  // const isLoading = useSelector(PostsSelectors.getSinglePostLoading);
+
+  const post = useSelector(PostsSelectors.getAlbumsPhotos);
   const { id } = params;
 
   useEffect(() => {
     if (id) {
-      dispatch(getSinglePost(id));
+      dispatch(getAlbumsPhotos(id));
     }
   }, [id]);
 
   return post ? (
-    // <Post post={post} />
     <PhotoCard post={post}></PhotoCard>
   ) : (
     <div className={styles.lottie__container}>
@@ -37,6 +31,6 @@ const PostContent = () => {
         loop={true}
       ></Lottie>
     </div>
-  ); //ВМЕСТО null - анимашка, иначе - пост
+  );
 };
 export default PostContent;

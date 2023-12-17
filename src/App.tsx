@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./app.module.scss";
 
 import ThemeProvider from "./Context/ThemeContext/Provider";
 import Router from "./Pages/Router";
@@ -11,6 +10,7 @@ import { changeTheme } from "./Redux/reducers/themeReducer";
 
 const App = () => {
   const dispatch = useDispatch();
+
   const onChangeTheme = () => {
     dispatch(changeTheme());
   };

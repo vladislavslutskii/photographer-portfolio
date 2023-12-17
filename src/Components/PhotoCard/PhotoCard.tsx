@@ -1,10 +1,8 @@
-import react from "react";
-import styles from "./PhotoCard.module.scss";
 import classNames from "classnames";
-import { Theme, useThemeContext } from "../../Context/ThemeContext/Context";
-import photo from "../../Assets/Photos/photo1.jpg";
-import { Arrow } from "../../Assets/Icons";
+import styles from "./PhotoCard.module.scss";
 import ImageSlider from "../ImageSlider";
+import { Theme, useThemeContext } from "../../Context/ThemeContext/Context";
+import { Arrow } from "../../Assets/Icons";
 import { Link } from "react-router-dom";
 import { PathNames } from "../../Pages/Router";
 

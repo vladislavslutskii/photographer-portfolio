@@ -3,19 +3,18 @@ import { create } from "apisauce";
 const API = create({
   baseURL: "http://localhost:3003",
 });
-const getPostsList = () => {
+const getAlbumsList = () => {
   return API.get("/albums");
 };
-const getPost = (albumId: string) => {
-  return API.get(`/albums/${albumId}/photos`);
+const getAlbumPhotos = (albumId: string) => {
+  return API.get(`/albums/${albumId}/photos/`);
 };
-const deletePost = (albumId: string) => {
-  return API.delete(`/albums/${albumId}/photos}`);
+const deleteAlbum = (id: string | number) => {
+  return API.delete(`/albums/${id}/`);
 };
+//
 export default {
-  getPostsList,
-  getPost,
-  deletePost,
+  getAlbumsList,
+  getAlbumPhotos,
+  deleteAlbum,
 };
-
-// return API.delete(`/albums/${albumId}/photos/?photoId=${photoId}`);

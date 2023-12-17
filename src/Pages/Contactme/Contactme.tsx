@@ -1,14 +1,9 @@
-import classnames from "classnames";
-import classNames from "classnames";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import Menu from "../../Components/Header";
+import classNames from "classnames";
+import styles from "./Contactme.module.scss";
 import Input from "../../Components/Input";
 import Label from "../../Components/Label";
-
 import { Theme, useThemeContext } from "../../Context/ThemeContext/Context";
-import { PathNames } from "../Router";
-import styles from "./Contactme.module.scss";
 
 const validateEmail = (email: string) => {
   return String(email)
@@ -23,16 +18,34 @@ type LabelProps = {
 };
 
 const Contactme = ({}) => {
+  const { theme, onChangeTheme } = useThemeContext();
+  const isDarkTheme = theme === Theme.Dark;
+
   const [name, setName] = useState(``);
+  const [nameError, setNameError] = useState(false);
+  const [nameTouched, setNameTouched] = useState(false);
 
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
   const [emailTouched, setEmailTouched] = useState(false);
 
+  const [number, setNumber] = useState("");
+  const [numberError, setNumberError] = useState(false);
+  const [numberTouched, setNumberTouched] = useState(false);
+
+  const [date, setDate] = useState("");
+  const [dateError, setDateError] = useState(false);
+  const [dateTouched, setDateTouched] = useState(false);
+
   const [message, setMessage] = useState("");
 
-  const { theme, onChangeTheme } = useThemeContext();
-  const isDarkTheme = theme === Theme.Dark;
+  useEffect(() => {
+    if (nameTouched && name === "") {
+      setNameError(true);
+    } else {
+      setNameError(false);
+    }
+  }, [nameTouched, name]);
 
   useEffect(() => {
     if (emailTouched && !validateEmail(email)) {
@@ -42,8 +55,36 @@ const Contactme = ({}) => {
     }
   }, [emailTouched, email]);
 
+  useEffect(() => {
+    if (numberTouched && number === "") {
+      setNumberError(true);
+    } else {
+      setNumberError(false);
+    }
+  }, [numberTouched, number]);
+
+  useEffect(() => {
+    if (dateTouched && date === "") {
+      setDateError(true);
+    } else {
+      setDateError(false);
+    }
+  }, [dateTouched, date]);
+
+  const onBlurName = () => {
+    setNameTouched(true);
+  };
+
   const onBlurEmail = () => {
     setEmailTouched(true);
+  };
+
+  const onBlurNumber = () => {
+    setNumberTouched(true);
+  };
+
+  const onBlurDate = () => {
+    setDateTouched(true);
   };
 
   return (
@@ -58,60 +99,112 @@ const Contactme = ({}) => {
             [styles.contact_title_dark]: isDarkTheme,
           })}
         >
-          Contact me
+          Хотите вывести свои воспоминания на новый уровень?
+        </div>
+        <div
+          className={classNames(styles.contact_subTitle, {
+            [styles.contact_subTitle_dark]: isDarkTheme,
+          })}
+        >
+          Будьте спокойны, зная, что вы получите прекрасные изображения,
+          которыми будете дорожить вечно. Пожалуйста, заполните нашу форму ниже.
         </div>
         <div className={styles.contact_form}>
           <div
-            className={classnames(styles.formContainer, {
+            className={classNames(styles.formContainer, {
               [styles.formContainer_dark]: isDarkTheme,
             })}
           >
-            <div className={styles.formContainer_inputContainer}>
-              <Label title={"Name"} />
-              <Input
-                value={name}
-                onChange={setName}
-                placeholder={"Your name"}
-                className={styles.formContainer_inputContainer_nameInput}
-              />
+            <div className={styles.formContainer_leftSide}>
+              <div className={styles.formContainer_leftSide_inputContainer}>
+                <Label title={"Имя"} required />
+                <Input
+                  value={name}
+                  onChange={setName}
+                  placeholder={"Ваше имя"}
+                  onBlur={onBlurName}
+                  error={!!nameError}
+                  className={
+                    styles.formContainer_leftSide_inputContainer_nameInput
+                  }
+                />
+              </div>
+              <div className={styles.formContainer_leftSide_inputContainer}>
+                <Label title={"Телефон"} required />
+                <Input
+                  value={number}
+                  onChange={setNumber}
+                  placeholder={"Ваш телефон"}
+                  onBlur={onBlurNumber}
+                  error={!!numberError}
+                  className={
+                    styles.formContainer_leftSide_inputContainer_numberInput
+                  }
+                />
+              </div>
             </div>
-            <div className={styles.formContainer_inputContainer}>
-              <Label title={"Email"} />
-              <Input
-                value={email}
-                onChange={setEmail}
-                placeholder={"Your email"}
-                onBlur={onBlurEmail}
-                error={!!emailError}
-                className={styles.formContainer_inputContainer_emailInput}
-              />
-              {emailTouched && emailError && (
-                <div
-                  className={classnames({
-                    [styles.error_Dark]: isDarkTheme,
-                  })}
-                >
-                  {emailError}
-                </div>
-              )}
+            <div className={styles.formContainer_rightSide}>
+              <div className={styles.formContainer_rightSide_inputContainer}>
+                <Label title={"Почта"} />
+                <Input
+                  value={email}
+                  onChange={setEmail}
+                  placeholder={"Ваша почта"}
+                  onBlur={onBlurEmail}
+                  error={!!emailError}
+                  className={
+                    styles.formContainer_rightSide_inputContainer_emailInput
+                  }
+                />
+                {emailTouched && emailError && (
+                  <div
+                    className={classNames({
+                      [styles.error_Dark]: isDarkTheme,
+                    })}
+                  >
+                    {emailError}
+                  </div>
+                )}
+              </div>
+              <div className={styles.formContainer_leftSide_inputContainer}>
+                <Label title={"Дата"} required />
+                <Input
+                  type="date"
+                  value={date}
+                  onChange={setDate}
+                  placeholder={"Ваша дата"}
+                  onBlur={onBlurDate}
+                  error={!!dateError}
+                  className={
+                    styles.formContainer_rightSide_inputContainer_dateInput
+                  }
+                />
+              </div>
             </div>
-            <div className={styles.formContainer_inputContainer}>
-              <Label title={"Message"} />
-              <Input
-                value={message}
-                onChange={setMessage}
-                placeholder={"Enter description"}
-                type={"textarea"}
-                className={styles.formContainer_inputContainer_messageInput}
-              />
-            </div>
-
-            <div
-              className={classNames(styles.formContainer_button, {
-                [styles.formContainer_button_dark]: isDarkTheme,
-              })}
-            >
-              send message
+            <div className={styles.formContainer_bottom}>
+              <div className={styles.formContainer_bottom_inputContainer}>
+                <Label title={"Сообщение"} />
+                <Input
+                  value={message}
+                  onChange={setMessage}
+                  placeholder={"Введите описание"}
+                  type={"textarea"}
+                  className={
+                    styles.formContainer_bottom_inputContainer_messageInput
+                  }
+                />
+              </div>
+              <div
+                className={classNames(
+                  styles.formContainer_bottom_bottomButton,
+                  {
+                    [styles.formContainer_bottom_bottomButton_dark]:
+                      isDarkTheme,
+                  }
+                )}
+              >
+                Отправить
+              </div>
             </div>
           </div>
         </div>

@@ -1,8 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Theme } from "../../Context/ThemeContext/Context";
 
+// Исходное состояние
 const INITIAL_STATE = {
-  theme: Theme.Light,
+  theme: Theme.Dark,
 };
 
 const themeSlice = createSlice({

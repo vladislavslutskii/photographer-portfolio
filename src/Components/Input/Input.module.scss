@@ -23,18 +23,60 @@
 .error {
   border-color: #fd3419;
 }
+@media (max-width: 1900px) {
+  input::-webkit-input-placeholder {
+    font-size: 14px;
+  }
+  input::-moz-placeholder {
+    font-size: 14px;
+  }
+  input:-ms-input-placeholder {
+    font-size: 14px;
+  }
+  input::-ms-input-placeholder {
+    font-size: 14px;
+  }
+  input::placeholder {
+    font-size: 14px;
+  }
+}
 @media (max-width: 450px) {
   .input {
     padding: 10px;
+  }
+  input::-webkit-input-placeholder {
+    font-size: 13px;
+  }
+  input::-moz-placeholder {
+    font-size: 13px;
+  }
+  input:-ms-input-placeholder {
+    font-size: 13px;
+  }
+  input::-ms-input-placeholder {
+    font-size: 13px;
+  }
+  input::placeholder {
+    font-size: 13px;
   }
 }
 @media (max-width: 375px) {
   .input {
     padding: 8px;
   }
-}
-@media (max-width: 321px) {
-  .input {
-    padding: 6px;
+  input::-webkit-input-placeholder {
+    font-size: 11px;
+  }
+  input::-moz-placeholder {
+    font-size: 11px;
+  }
+  input:-ms-input-placeholder {
+    font-size: 11px;
+  }
+  input::-ms-input-placeholder {
+    font-size: 11px;
+  }
+  input::placeholder {
+    font-size: 11px;
   }
 }

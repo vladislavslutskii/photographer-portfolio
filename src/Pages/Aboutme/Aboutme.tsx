@@ -1,8 +1,8 @@
 import react from "react";
-import styles from "./Aboutme.module.scss";
-import { Theme, useThemeContext } from "../../Context/ThemeContext/Context";
 import classNames from "classnames";
-import photo from "../../Assets/Photos/background1.png";
+import styles from "./Aboutme.module.scss";
+import photo from "../../Assets/Photos/background.png";
+import { Theme, useThemeContext } from "../../Context/ThemeContext/Context";
 import { useDispatch } from "react-redux";
 
 const Aboutme = ({}) => {
@@ -10,37 +10,62 @@ const Aboutme = ({}) => {
   const isDarkTheme = theme === Theme.Dark;
   const dispatch = useDispatch();
 
-  // dispatch(isDarkTheme);
   return (
     <div
-      className={classNames(styles.aboutMe, {
-        [styles.aboutMe_dark]: isDarkTheme,
+      className={classNames(styles.aboutWrap, {
+        [styles.aboutWrap_dark]: isDarkTheme,
       })}
     >
-      <div className={classNames(styles.aboutMe_wrap, {})}>
+      <div
+        className={classNames(styles.aboutWrap_title, {
+          [styles.aboutWrap_title_dark]: isDarkTheme,
+        })}
+      >
+        Немного обо мне
+      </div>
+      <div className={styles.aboutWrap_topSection}>
+        <div className={styles.aboutWrap_topSection_photoWrap}>
+          <img
+            className={styles.aboutWrap_topSection_photoWrap_photo}
+            src={photo}
+            alt=""
+          />
+        </div>
         <div
-          className={classNames(styles.aboutMe_wrapLeft, {
-            [styles.aboutMe_wrapLeft_dark]: isDarkTheme,
+          className={classNames(styles.aboutWrap_topSection_text, {
+            [styles.aboutWrap_topSection_text_dark]: isDarkTheme,
           })}
         >
-          <div className={classNames(styles.aboutMe_wrapLeft_text, {})}>
-            BIO Bali is a Portrait & Documentary photographer based out of New
-            Delhi. He provides compelling imagery for clients spanning the
-            editorial and commercial markets. He briefly assisted vii agency
-            photographer John Stanmeyer on a National Geographic assignment ,
-            and then studied Creative photography for a year. Selected editorial
-            clients - Porter Magazine, T magazine NYT, GQ India, Elle, Vogue
-            India, Vanity Fair UK, Forbes Asia, Condenast Traveller,
-            DestinAsian, UK financial times, Rhapsody New York Selected
-            Companies/Organisations - Netflix, Sequoia Capital, Assa Abloy,
-            Oracle, Hike, World Health Organisation, University of Sydney.{" "}
-          </div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem vitae cum
+          similique modi maxime iste quam itaque illum dolor aspernatur
+          consequuntur nesciunt enim, maiores qui, facilis nostrum nam aliquid
+          assumenda. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Rem vitae cum similique modi maxime iste quam itaque illum dolor
+          aspernatur consequuntur nesciunt enim, maiores qui, facilis nostrum
+          nam aliquid assumenda. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit.
         </div>
-        <div className={classNames(styles.aboutMe_wrapRight, {})}>
+      </div>
+      <div className={styles.aboutWrap_bottomSection}>
+        <div
+          className={classNames(styles.aboutWrap_bottomSection_text, {
+            [styles.aboutWrap_bottomSection_text_dark]: isDarkTheme,
+          })}
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem vitae cum
+          similique modi maxime iste quam itaque illum dolor aspernatur
+          consequuntur nesciunt enim, maiores qui, facilis nostrum nam aliquid
+          assumenda. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Rem vitae cum similique modi maxime iste quam itaque illum dolor
+          aspernatur consequuntur nesciunt enim, maiores qui, facilis nostrum
+          nam aliquid assumenda. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit.
+        </div>
+        <div className={styles.aboutWrap_bottomSection_photoWrap}>
           <img
-            className={classNames(styles.aboutMe_wrapRight_photo, {})}
+            className={styles.aboutWrap_bottomSection_photoWrap_photo}
             src={photo}
-            alt="ds"
+            alt=""
           />
         </div>
       </div>

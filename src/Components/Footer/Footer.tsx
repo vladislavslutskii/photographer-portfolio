@@ -1,9 +1,9 @@
-import classNames from "classnames";
 import React from "react";
+import classNames from "classnames";
+import styles from "./Footer.module.scss";
 import { Link } from "react-router-dom";
 import { Instagram } from "../../Assets/Icons";
 import { Theme, useThemeContext } from "../../Context/ThemeContext/Context";
-import styles from "./Footer.module.scss";
 
 const Footer = ({}) => {
   const { theme, onChangeTheme } = useThemeContext();
@@ -15,8 +15,8 @@ const Footer = ({}) => {
         [styles.footer_dark]: isDarkTheme,
       })}
     >
-      <ul className={classNames(styles.footer_links, {})}>
-        <li className={classNames(styles.footer_links_instagram, {})}>
+      <ul className={styles.footer_links}>
+        <li className={styles.footer_links_instagram}>
           <Link
             className={classNames(styles.footer_links_link, {
               [styles.footer_links_dark]: isDarkTheme,
@@ -26,11 +26,11 @@ const Footer = ({}) => {
           >
             Instagram
           </Link>
-          <Link className={classNames(styles.footer_links_icon, {})} to={""}>
+          <Link className={styles.footer_links_icon} to={""}>
             <Instagram width={50} height={50}></Instagram>
           </Link>
         </li>
-        <li className={classNames(styles.footer_icons_facebook, {})}>
+        <li className={styles.footer_icons_facebook}>
           <Link
             className={classNames(styles.footer_links_link, {
               [styles.footer_links_dark]: isDarkTheme,
@@ -39,11 +39,11 @@ const Footer = ({}) => {
           >
             Facebook
           </Link>
-          <Link className={classNames(styles.footer_links_icon, {})} to={""}>
+          <Link className={styles.footer_links_icon} to={""}>
             <Instagram width={50} height={50}></Instagram>
           </Link>
         </li>
-        <li className={classNames(styles.footer_links_unsplash, {})}>
+        <li className={styles.footer_links_unsplash}>
           <Link
             className={classNames(styles.footer_links_link, {
               [styles.footer_links_dark]: isDarkTheme,
@@ -52,7 +52,7 @@ const Footer = ({}) => {
           >
             Unsplash
           </Link>
-          <Link className={classNames(styles.footer_links_icon, {})} to={""}>
+          <Link className={styles.footer_links_icon} to={""}>
             <Instagram width={50} height={50}></Instagram>
           </Link>
         </li>

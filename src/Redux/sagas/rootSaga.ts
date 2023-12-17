@@ -1,7 +1,7 @@
 import { all } from "redux-saga/effects";
 
-import postsSaga from "./postsSaga";
+import photosSaga from "./photosSaga";
 
 export default function* rootSaga() {
-  yield all([postsSaga()]);
+  yield all([photosSaga()]);
 }

@@ -1,11 +1,11 @@
 import { combineReducers } from "@reduxjs/toolkit";
 
 import themeReducer from "./themeReducer";
-import postsReducer from "./postsreducer";
+import photosReducer from "./photosReducer";
 
 const reducer = combineReducers({
   themeReducer,
-  postsReducer,
+  photosReducer,
 });
 
 export default reducer;

@@ -1,18 +1,29 @@
-import react, { useState } from "react";
-import styles from "./Header.module.scss";
-import { Theme, useThemeContext } from "../../Context/ThemeContext/Context";
 import classNames from "classnames";
-import { Burger, BurgerOpen, Dark, Logo, Sunny } from "../../Assets/Icons";
-import { NavLink, useLocation } from "react-router-dom";
-import classnames from "classnames";
-import { PathNames } from "../../Pages/Router";
+import styles from "./Header.module.scss";
 import Menu from "../Menu";
+import { useEffect, useState } from "react";
+import { Theme, useThemeContext } from "../../Context/ThemeContext/Context";
+import { Burger, BurgerOpen, Dark, Sunny } from "../../Assets/Icons";
+import { NavLink, useLocation } from "react-router-dom";
+import { PathNames } from "../../Pages/Router";
 
 const Header = ({}) => {
   const [menuActive, setMenuActive] = useState(true);
   const { theme, onChangeTheme } = useThemeContext();
   const isDarkTheme = theme === Theme.Dark;
   const location = useLocation();
+
+  useEffect(() => {
+    if (!menuActive) {
+      const elem = document.getElementById("root");
+      // @ts-ignore
+      elem.style.overflow = "hidden";
+    } else if (menuActive) {
+      const elem = document.getElementById("root");
+      // @ts-ignore
+      elem.style.overflow = "visible";
+    }
+  }, [menuActive]);
 
   return (
     <nav
@@ -31,7 +42,14 @@ const Header = ({}) => {
           [styles.header_logo_dark]: isDarkTheme,
         })}
       >
-        Lo
+        <NavLink
+          className={classNames(styles.header_logo_text, {
+            [styles.header_logo_dark]: isDarkTheme,
+          })}
+          to={PathNames.Home}
+        >
+          Lo
+        </NavLink>
         <div className={styles.header_logo_themeButton} onClick={onChangeTheme}>
           {theme === Theme.Light ? (
             <Dark width={30} height={30}></Dark>
@@ -63,7 +81,7 @@ const Header = ({}) => {
           })}
         >
           <NavLink
-            className={classnames(styles.headerLink_navLink, {
+            className={classNames(styles.headerLink_navLink, {
               [styles.activeLink]: location.pathname === PathNames.Contact,
               [styles.activeLink_dark]:
                 location.pathname === PathNames.Contact && isDarkTheme,
@@ -71,12 +89,12 @@ const Header = ({}) => {
             })}
             to={PathNames.Contact}
           >
-            Contact
+            Контакты
           </NavLink>
         </li>
         <li className={styles.headerLink_gallery}>
           <NavLink
-            className={classnames(styles.headerLink_navLink, {
+            className={classNames(styles.headerLink_navLink, {
               [styles.activeLink]: location.pathname === PathNames.Gallery,
               [styles.activeLink_dark]:
                 location.pathname === PathNames.Gallery && isDarkTheme,
@@ -84,12 +102,12 @@ const Header = ({}) => {
             })}
             to={PathNames.Gallery}
           >
-            Gallery
+            Портфолио
           </NavLink>
         </li>
         <li className={styles.headerLink_about}>
           <NavLink
-            className={classnames(styles.headerLink_navLink, {
+            className={classNames(styles.headerLink_navLink, {
               [styles.activeLink]: location.pathname === PathNames.About,
               [styles.activeLink_dark]:
                 location.pathname === PathNames.About && isDarkTheme,
@@ -97,12 +115,12 @@ const Header = ({}) => {
             })}
             to={PathNames.About}
           >
-            About
+            Обо мне
           </NavLink>
         </li>
         <li className={styles.headerLink_home}>
           <NavLink
-            className={classnames(styles.headerLink_navLink, {
+            className={classNames(styles.headerLink_navLink, {
               [styles.activeLink]: location.pathname === PathNames.Home,
               [styles.activeLink_dark]:
                 location.pathname === PathNames.Home && isDarkTheme,
@@ -110,7 +128,7 @@ const Header = ({}) => {
             })}
             to={PathNames.Home}
           >
-            Home
+            Главная
           </NavLink>
         </li>
       </ul>

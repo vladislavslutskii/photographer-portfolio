@@ -1,9 +1,10 @@
-import { useCallback, useEffect, useRef, useState } from "react";
-import { SliderArrowLeft, SliderArrowRight } from "../../Assets/Icons";
 import styles from "./ImageSlider.module.scss";
+import { useCallback, useRef, useState } from "react";
+import { SliderArrowLeft, SliderArrowRight } from "../../Assets/Icons";
 import { Theme, useThemeContext } from "../../Context/ThemeContext/Context";
 import { useDispatch, useSelector } from "react-redux";
-import { deletePost } from "../../Redux/reducers/postsreducer";
+import { deleteAlbum } from "../../Redux/reducers/photosReducer";
+
 const slideStyles = {
   width: "100%",
   height: "100%",
@@ -23,7 +24,7 @@ const slidesContainerStyles = {
 const ImageSlider = ({ slides, parentWidth }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const dispatch = useDispatch();
-  const { theme, onChangeTheme } = useThemeContext();
+  const { theme } = useThemeContext();
   const isDarkTheme = theme === Theme.Dark;
 
   const goToPrevious = () => {
@@ -52,7 +53,7 @@ const ImageSlider = ({ slides, parentWidth }) => {
     transform: `translateX(${-(currentIndex * parentWidth)}px)`,
   });
   const deletePosts = (slide) => {
-    dispatch(deletePost(slide));
+    dispatch(deleteAlbum(slide));
   };
   return (
     <div className={styles.sliderStyles}>

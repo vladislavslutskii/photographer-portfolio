@@ -8,3 +8,4 @@ export { CloseMenu } from "./CloseMenu";
 export { Arrow } from "./Arrow";
 export { SliderArrowLeft } from "./SliderArrowLeft";
 export { SliderArrowRight } from "./SliderArrowRight";
+export { Cross } from "./Cross";
