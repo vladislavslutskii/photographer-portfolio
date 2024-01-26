@@ -3,6 +3,7 @@ import classNames from "classnames";
 import styles from "./Gallery.module.scss";
 import GallerySlider from "../../Components/GallerySlider/GallerySlider";
 import PhotosSelectors from "../../Redux/selectors/photosSelectors";
+import ModalAddAlbum from "./components/PostModalImg";
 import { useDispatch, useSelector } from "react-redux";
 import { Theme, useThemeContext } from "../../Context/ThemeContext/Context";
 import { getAlbumsList } from "../../Redux/reducers/photosReducer";
@@ -23,6 +24,7 @@ const Gallery = () => {
         [styles.galleryWrap_dark]: isDarkTheme,
       })}
     >
+      <ModalAddAlbum></ModalAddAlbum>
       <GallerySlider albumsList={albumsList}></GallerySlider>
     </div>
   );

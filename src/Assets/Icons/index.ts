@@ -9,3 +9,5 @@ export { Arrow } from "./Arrow";
 export { SliderArrowLeft } from "./SliderArrowLeft";
 export { SliderArrowRight } from "./SliderArrowRight";
 export { Cross } from "./Cross";
+export { Upload } from "./Upload";
+export { Image } from "./Image";

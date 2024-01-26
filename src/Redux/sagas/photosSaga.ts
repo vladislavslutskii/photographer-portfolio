@@ -1,5 +1,6 @@
 import Api from "../api";
 import {
+  addNewAlbum,
   deleteAlbum,
   getAlbumsList,
   getAlbumsPhotos,
@@ -43,11 +44,22 @@ function* deleteAlbumWorker(action: PayloadAction<DeletePostPayload>) {
     console.log("problem", problem);
   }
 }
+function* addNewAlbumWorker(action: PayloadAction<any>) {
+  const { formData, callback } = action.payload;
+  const { status, problem } = yield call(Api.addNewAlbum, formData);
+
+  if (status === 201) {
+    callback();
+  } else {
+    console.log("problem", problem);
+  }
+}
 
 export default function* postsSagaWatcher() {
   yield all([
     takeLatest(getAlbumsList, getAlbumsListWorker),
     takeLatest(getAlbumsPhotos, getAlbumPhotosWorker),
     takeLatest(deleteAlbum, deleteAlbumWorker),
+    takeLatest(addNewAlbum, addNewAlbumWorker),
   ]);
 }

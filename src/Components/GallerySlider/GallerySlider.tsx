@@ -13,13 +13,20 @@ import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import { Cross, SliderArrowLeft, SliderArrowRight } from "../../Assets/Icons";
 import { Theme, useThemeContext } from "../../Context/ThemeContext/Context";
 import { useDispatch } from "react-redux";
-import { deleteAlbum } from "../../Redux/reducers/photosReducer";
+import {
+  deleteAlbum,
+  setModalAddAlbumVisible,
+} from "../../Redux/reducers/photosReducer";
 
 const GallerySlider = ({ albumsList }: any) => {
   const navigate = useNavigate();
   const { theme } = useThemeContext();
   const isDarkTheme = theme === Theme.Dark;
   const dispatch = useDispatch();
+
+  const onOpenModal = () => {
+    dispatch(setModalAddAlbumVisible(true));
+  };
 
   return (
     <div className="container">
@@ -82,6 +89,7 @@ const GallerySlider = ({ albumsList }: any) => {
             className={classNames(styles.addAlbumCard, {
               [styles.addAlbumCard_dark]: isDarkTheme,
             })}
+            onClick={onOpenModal}
             src={albumPhoto}
             alt="slide_image"
           />
