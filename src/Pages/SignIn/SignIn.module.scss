@@ -1,0 +1,24 @@
+.signIn {
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  &_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    padding: 30px;
+    border-radius: 50px !important;
+  }
+  &_form {
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+.formLink {
+  margin-left: 5px;
+  text-decoration: none;
+}

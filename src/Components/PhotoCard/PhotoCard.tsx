@@ -22,9 +22,7 @@ const PhotoCard = ({ post }: any) => {
         })}
       >
         <div className={styles.photoCard_wrap_leftSide}>
-          <div className={styles.photoCard_wrap_leftSide_slider}>
-            <ImageSlider slides={post} parentWidth={533} />
-          </div>
+          <ImageSlider slides={post} />
         </div>
         <div className={styles.photoCard_wrap_rightSide}>
           <div

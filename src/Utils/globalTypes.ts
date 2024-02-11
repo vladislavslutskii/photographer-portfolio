@@ -6,3 +6,15 @@ export type CardPostType = {
   datePhotosession: string;
 };
 export type AlbumsListType = Array<CardPostType>;
+
+export type setUserPayload = {
+  name: string;
+  id: number;
+  email: string;
+  password: string;
+};
+export type UserActionPayload = {
+  name: string;
+  password: string;
+  email: string;
+};

@@ -18,7 +18,12 @@ const PagesWrapper = () => {
         [styles.app_dark]: isDarkTheme,
       })}
     >
-      {location.pathname === PathNames.Home ? null : <Header></Header>}
+      {location.pathname === PathNames.Home ||
+      location.pathname === PathNames.SignUp ||
+      location.pathname === PathNames.SignIn ? null : (
+        <Header></Header>
+      )}
+
       {location.pathname === PathNames.Home ? <Home></Home> : <Outlet></Outlet>}
       {location.pathname === PathNames.Contact ? <Footer></Footer> : null}
       {location.pathname === PathNames.About ? <Footer></Footer> : null}

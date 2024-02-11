@@ -5,8 +5,13 @@ import PagesWrapper from "../PagesWrapper";
 import Aboutme from "../Aboutme/Aboutme";
 import PostContent from "../PostContent";
 
+import SignIn from "../SignIn";
+import SignUp from "../SingUp";
+
 export enum PathNames {
   Home = `/`,
+  SignUp = "/signup",
+  SignIn = "/login",
   Gallery = `/gallery`,
   Contact = `/contactme`,
   About = `/aboutme`,
@@ -23,12 +28,9 @@ const Router = () => {
             element={<Contactme></Contactme>}
           ></Route>
           <Route path={PathNames.About} element={<Aboutme></Aboutme>}></Route>
-          <Route
-            path={PathNames.Gallery}
-            // element={<PhotoCard></PhotoCard>}
-            element={<Gallery></Gallery>}
-            // element={<GallerySlider></GallerySlider>}
-          ></Route>
+          <Route path={PathNames.SignUp} element={<SignUp></SignUp>}></Route>
+          <Route path={PathNames.SignIn} element={<SignIn></SignIn>}></Route>
+          <Route path={PathNames.Gallery} element={<Gallery></Gallery>}></Route>
           <Route
             path={PathNames.GalleryPhoto}
             element={<PostContent></PostContent>}
