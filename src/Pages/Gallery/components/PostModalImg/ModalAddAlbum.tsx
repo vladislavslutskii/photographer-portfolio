@@ -64,7 +64,7 @@ const ModalAddAlbum = () => {
                       <div
                         className={styles.imageContainer_header_leftSide_text}
                       >
-                        {image.file?.name}
+                        {image.dataURL}
                       </div>
                     </div>
                     <button

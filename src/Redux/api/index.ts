@@ -17,7 +17,7 @@ const addNewAlbum = (data: any) => {
   return API.post(`/albums/`, data);
 };
 const createNewUser = (userData: UserActionPayload) => {
-  return API.post(`/albums/`, userData);
+  return API.post(`/register/`, userData);
 };
 // const getCurrentUser = (email: string, password: string) => {
 //   return API.get(`/albums/`, [email, password]);

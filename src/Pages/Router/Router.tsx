@@ -7,6 +7,7 @@ import PostContent from "../PostContent";
 
 import SignIn from "../SignIn";
 import SignUp from "../SingUp";
+import Admin from "../Admin";
 
 export enum PathNames {
   Home = `/`,
@@ -16,6 +17,7 @@ export enum PathNames {
   Contact = `/contactme`,
   About = `/aboutme`,
   GalleryPhoto = "/gallery/albums/:id/photos",
+  Admin = `/admin`,
 }
 
 const Router = () => {
@@ -31,6 +33,7 @@ const Router = () => {
           <Route path={PathNames.SignUp} element={<SignUp></SignUp>}></Route>
           <Route path={PathNames.SignIn} element={<SignIn></SignIn>}></Route>
           <Route path={PathNames.Gallery} element={<Gallery></Gallery>}></Route>
+          <Route path={PathNames.Admin} element={<Admin></Admin>}></Route>
           <Route
             path={PathNames.GalleryPhoto}
             element={<PostContent></PostContent>}

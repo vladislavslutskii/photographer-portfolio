@@ -1,4 +1,12 @@
 {
+  "users": [
+    {
+      "email": "ads@mail.ru",
+      "password": "$2a$10$a73A9CeW2sWEhbeBemkZ1uMmyk58PU.RHQulUlniwLx6hyzWFDuSi",
+      "name": "hello",
+      "id": 1
+    }
+  ],
   "albums": [
     {
       "id": 1,

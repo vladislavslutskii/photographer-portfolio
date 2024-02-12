@@ -18,6 +18,7 @@
     "classnames": "^2.3.2",
     "gh-pages": "^5.0.0",
     "json-server": "^0.17.4",
+    "json-server-auth": "^2.1.0",
     "lottie-react": "^2.4.0",
     "moment": "^2.29.4",
     "react": "^18.2.0",
@@ -44,7 +45,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "server": "json-server -w server/db.json -p 3003"
+    "server": "json-server server/db.json -m ./node_modules/json-server-auth -r server/routes.json -p 3003"
   },
   "eslintConfig": {
     "extends": [
