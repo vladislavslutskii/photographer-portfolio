@@ -1,0 +1,96 @@
+.navBar {
+  background-color: #1a83ff;
+  height: 70px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  &_leftSide {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+.leftSide {
+  &_openButton {
+    margin-left: 2rem;
+    font-size: 2rem;
+    background: none;
+  }
+  &_logOut {
+    margin-right: 2rem;
+  }
+  &_title {
+    margin-left: 15px;
+    font-size: 1.7rem;
+    color: #fff;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.0075em;
+  }
+}
+.menuBars {
+  margin-left: 2rem;
+  font-size: 2rem;
+  background: none;
+}
+
+.navMenu {
+  background-color: #1a83ff;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+}
+
+.navMenu_active {
+  left: 0;
+  transition: 350ms;
+}
+
+.navText {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8px 0px 0px 16px;
+  list-style: none;
+  height: 50px;
+}
+
+.navText a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: 1.5rem;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
+}
+
+.navText a:hover {
+  background-color: #1a83ff;
+}
+
+.navMenu_items {
+  width: 100%;
+}
+
+.navBar_toggle {
+  background-color: #1a83ff;
+  width: 10%;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+span {
+  margin-left: 16px;
+}

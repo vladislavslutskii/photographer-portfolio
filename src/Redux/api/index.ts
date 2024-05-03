@@ -2,7 +2,7 @@ import { create } from "apisauce";
 import { UserActionPayload } from "../../Utils/globalTypes";
 
 const API = create({
-  baseURL: "http://localhost:3003",
+  baseURL: "http://localhost:3001",
 });
 const getAlbumsList = () => {
   return API.get("/albums");

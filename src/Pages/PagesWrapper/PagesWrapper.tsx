@@ -21,7 +21,8 @@ const PagesWrapper = () => {
       {location.pathname === PathNames.Home ||
       location.pathname === PathNames.SignUp ||
       location.pathname === PathNames.SignIn ||
-      location.pathname === PathNames.Admin ? null : (
+      location.pathname === PathNames.Admin ||
+      location.pathname === PathNames.AdminDasboard ? null : (
         <Header></Header>
       )}
 

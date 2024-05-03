@@ -36,6 +36,7 @@ const GallerySlider = ({ albumsList }: any) => {
         grabCursor={true}
         centeredSlides={true}
         // loop={true}
+
         slidesPerView={"auto"}
         coverflowEffect={{
           rotate: 0,

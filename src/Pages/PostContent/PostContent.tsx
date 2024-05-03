@@ -3,7 +3,8 @@ import styles from "./PostContent.module.scss";
 import PostsSelectors from "../../Redux/selectors/photosSelectors";
 import Lottie from "lottie-react";
 import animation from "../../lotties/transfer.json";
-import PhotoCard from "../../Components/PhotoCard";
+import ImageSlider from "../../Components/ImageSlider";
+
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getAlbumsPhotos } from "../../Redux/reducers/photosReducer";
@@ -22,7 +23,7 @@ const PostContent = () => {
   }, [id]);
 
   return post ? (
-    <PhotoCard post={post}></PhotoCard>
+    <ImageSlider slides={post}></ImageSlider>
   ) : (
     <div className={styles.lottie__container}>
       <Lottie

@@ -1,90 +1,91 @@
 {
-  "users": [
-    {
-      "email": "ads@mail.ru",
-      "password": "$2a$10$a73A9CeW2sWEhbeBemkZ1uMmyk58PU.RHQulUlniwLx6hyzWFDuSi",
-      "name": "hello",
-      "id": 1
-    }
-  ],
   "albums": [
     {
       "id": 1,
-      "albumUrl": "https://klike.net/uploads/posts/2020-01/1578301079_38.jpg"
+      "albumUrl": "https://plus.unsplash.com/premium_photo-1698442704192-086265cf630e?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       "id": 2,
-      "albumUrl": "https://klike.net/uploads/posts/2019-11/1574608674_21.jpg"
+      "albumUrl": "https://images4.alphacoders.com/889/889823.jpg"
     },
     {
       "id": 3,
-      "albumUrl": "https://klike.net/uploads/posts/2019-11/1574608674_21.jpg"
+      "albumUrl": "https://images3.alphacoders.com/699/699057.png"
     },
     {
       "id": 4,
-      "albumUrl": "https://klike.net/uploads/posts/2019-11/1574608613_8.jpg"
-    },
-    {
-      "id": 5,
-      "albumUrl": "https://klike.net/uploads/posts/2020-01/1578301079_38.jpg"
+      "albumUrl": "https://images2.alphacoders.com/597/597965.jpg"
     }
   ],
   "photos": [
     {
       "albumId": 1,
       "photoId": 1,
-      "title": "test1",
-      "text": "test1",
-      "url": "https://via.placeholder.com/600/92c952"
+      "description": "Slide Description Three",
+      "src": "https://images2.alphacoders.com/597/597965.jpg"
     },
     {
       "albumId": 1,
       "photoId": 2,
-      "title": "test1",
-      "text": "test1",
-      "url": "https://via.placeholder.com/600/92c952"
+
+      "description": "Slide Description Three",
+      "src": "https://images2.alphacoders.com/597/597965.jpg"
     },
     {
       "albumId": 1,
       "photoId": 3,
-      "title": "test1",
-      "text": "test1",
-      "url": "https://via.placeholder.com/600/92c952"
+
+      "description": "Slide Description Three",
+      "src": "https://images2.alphacoders.com/597/597965.jpg"
     },
     {
       "albumId": 1,
       "photoId": 4,
-      "title": "test1",
-      "text": "test1",
-      "url": "https://via.placeholder.com/600/92c952"
+
+      "description": "Slide Description Three",
+      "src": "https://images2.alphacoders.com/597/597965.jpg"
+    },
+    {
+      "albumId": 1,
+      "photoId": 5,
+
+      "description": "Slide Description Three",
+      "src": "https://images2.alphacoders.com/597/597965.jpg"
+    },
+    {
+      "albumId": 1,
+      "photoId": 6,
+
+      "description": "Slide Description Three",
+      "src": "https://images2.alphacoders.com/597/597965.jpg"
     },
     {
       "albumId": 2,
       "photoId": 1,
-      "title": "test2",
-      "text": "test2",
-      "url": "https://via.placeholder.com/600/92c952"
+      "description": "Slide Description Three",
+
+      "src": "https://images2.alphacoders.com/597/597965.jpg"
     },
     {
       "albumId": 3,
       "photoId": 1,
-      "title": "test3",
-      "text": "test3",
-      "url": "https://via.placeholder.com/600/92c952"
+      "description": "Slide Description Three",
+
+      "src": "https://images2.alphacoders.com/597/597965.jpg"
     },
     {
       "albumId": 4,
       "photoId": 1,
-      "title": "test4",
-      "text": "test4",
-      "url": "https://via.placeholder.com/600/92c952"
+      "description": "Slide Description Three",
+
+      "src": "https://images2.alphacoders.com/597/597965.jpg"
     },
     {
       "albumId": 5,
       "photoId": 1,
-      "title": "test5",
-      "text": "test5",
-      "url": "https://via.placeholder.com/600/92c952"
+      "description": "Slide Description Three",
+
+      "src": "https://images2.alphacoders.com/597/597965.jpg"
     }
   ]
 }

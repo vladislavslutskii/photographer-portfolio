@@ -1,3 +1,11 @@
 {
-  "cSpell.words": ["mystyle", "postsreducer", "reduxjs"]
+  "cSpell.words": ["mystyle", "postsreducer", "reduxjs"],
+  "search.exclude": {
+    "**/node_modules": false
+  },
+  "cSpell.ignoreRegExpList": ["\"**/node_modules\": false"],
+  "cSpell.enableFiletypes": [
+    "**/node_modules\": false",
+    "**/node_modules\": false"
+  ]
 }
